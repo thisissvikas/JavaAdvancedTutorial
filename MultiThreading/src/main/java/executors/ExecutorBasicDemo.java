@@ -5,9 +5,9 @@ import java.util.concurrent.Executors;
 
 public class ExecutorBasicDemo {
   public static void main(String[] args) {
-    ExecutorService executorService = Executors.newFixedThreadPool(5);
+    ExecutorService executorService = Executors.newFixedThreadPool(1);
 
-    for (int i = 0; i < 10; i++) {
+    for (int i = 0; i < 2000; i++) {
       MyRunnable runnable = new MyRunnable(i);
       executorService.execute(runnable);
     }
